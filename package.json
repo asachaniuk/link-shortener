@@ -1,0 +1,33 @@
+{
+  "name": "link-shortener",
+  "version": "1.0.0",
+  "description": "Create Link shortener app using MongoDB, ExpressJS, React and NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asachaniuk/link-shortener.git"
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "Alex Sachaniuk <asachaniuk@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asachaniuk/link-shortener/issues"
+  },
+  "homepage": "https://github.com/asachaniuk/link-shortener#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
+  }
+}
