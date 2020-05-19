@@ -15,7 +15,7 @@ router.post('/generate', auth, async (req, res) => {
 		const existing = await Link.findOne({ from })
 
 		if (existing) {
-			return res.json({ lonk: existing })
+			return res.json({ link: existing })
 		}
 
 		const to = baseUrl + '/t/' + code
@@ -28,7 +28,7 @@ router.post('/generate', auth, async (req, res) => {
 
 		res.status(201).json({ link })
 	} catch (error) {
-		res.status(500).json({ message: 'Ooops, something went wrong..., try again' })
+		res.status(500).json({ message: 'Ooops, something went wrong..., try again1' })
 	}
 })
 
@@ -37,16 +37,16 @@ router.get('/', auth,  async (req, res) => {
 		const links = await Link.find({ owner: req.user.userId })
 		res.json(links)
 	} catch (error) {
-		res.status(500).json({ message: 'Ooops, something went wrong..., try again' })
+		res.status(500).json({ message: 'Ooops, something went wrong..., try again2' })
 	}
 })
 
 router.get('/:id', auth, async (req, res) => {
 	try {
-		const link = await Link.findById(res.params.id)
+		const link = await Link.findById(req.params.id)
 		res.json(link)
 	} catch (error) {
-		res.status(500).json({ message: 'Ooops, something went wrong..., try again' })
+		res.status(500).json({ message: 'Ooops, something went wrong..., try again3' })
 	}
 })
 
